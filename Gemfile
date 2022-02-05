@@ -37,6 +37,21 @@ group :development, :test do
   gem 'pry-rails'
   gem 'dotenv-rails'
 
+  ######### EXTRA GEMS #########
+  # Behaviour Driven Development for Ruby on Rails. Making TDD Productive and
+  # Fun.
+  #
+  # After installing, you need to run:
+  # run rails g rspec:install
+  gem 'rspec-rails'
+  #
+  # A library for setting up Ruby objects as test data.
+  # gem 'factory_bot'
+  # Factory Bot S2 Rails
+  gem 'factory_bot_rails'
+  #
+  ######### EXTRA GEMS #########
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -53,11 +68,30 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
+  # Capybara helps you test web applications by simulating
+  # how a real user would interact with your app.
   gem 'capybara', '>= 3.26'
+
+  # This gem provides Ruby bindings for WebDriver and has been
+  # tested to work on MRI (2.0 through 2.2).
+  # MRI -> Matz's Ruby Interpreter or Ruby MRI
+  # Yukihiro Matsumoto, 'Matz', creator of Ruby
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
+
+  # Run Selenium tests more easily with automatic installation
+  # and updates for all supported webdrivers.
   gem 'webdrivers'
+
+  ######### EXTRA GEMS #########
+  # Strategies for cleaning databases in Ruby.
+  # Can be used to ensure a clean state for testing.
+  gem 'database_cleaner'
+  #
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to
+  # test common Rails functionality that, if written by hand, would be much
+  # longer, more complex, and error-prone.
+  gem 'shoulda-matchers'
+  ######### EXTRA GEMS #########
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
